@@ -16,7 +16,7 @@ Assignment
 
     Execute test cases using "mvn test"
    
-##Service end points
+##------------Service end points------------------
 
 #### CREATE USER
 ##### post request
@@ -28,12 +28,11 @@ Assignment
         "phoneNumber": "121212"
     }
  
-
+#####-----------------------------------------------
 #### GET USER
 ##### get request
 ##### http://localhost:8585/user/data/get/1
-
- 
+#####-----------------------------------------------
 #### UPDATE USER
 ##### put request
 ##### http://localhost:8585/user/data/update
@@ -45,18 +44,17 @@ Assignment
 	    "email": "sahan@mail.com",
 	    "phoneNumber": "121212"
     }
- 
+#####-----------------------------------------------
 #### GET ALL USERS
 ##### get request
 ##### http://localhost:8585/user/data/getAll
-
- 
+#####-----------------------------------------------
 #### DELETE USER
 ##### delete request
 ##### http://localhost:8585/user/data/delete?userId=1
+#####-----------------------------------------------
 
-
-#Requirements
+ ##Requirements
 
 Java 8
 
