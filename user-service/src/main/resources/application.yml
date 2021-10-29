@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: USER-SERVICE
+  datasource:
+    url: jdbc:h2:mem:testdb
+    #url: jdbc:h2:file:/data/sample
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    show-sql: true
+    #database-platform: hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+server:
+  port: 8585
+  servlet:
+    context-path: /user
+logging:
+  level:
+    org.springframework: ERROR
+    org.hibernate: ERROR
+    com.zaxxer: ERROR
+    com.dev: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss:SSS} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss:SSS} [%thread] %-5level %logger{36} - %msg%n"
+  file: logs\user.log
+
+
+
+
+
