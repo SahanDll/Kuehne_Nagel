@@ -2,6 +2,7 @@
 Assignment
 
 ##Start
+
     Go to Kuehne_Nagel\user-service folder
     open CMD
     execute "mvn spring-boot:run"
@@ -10,12 +11,14 @@ Assignment
     then run jar file using "java -jar user-service-0.0.1-SNAPSHOT.jar"
     *Since using H2 inmemory DB, if service is restarted previos data will be cleaned.
     *Service will start with port 8585
+    
 ##Test
+
     Execute test cases using "mvn test"
    
 ##Service end points
 
-#### CREATE
+#### CREATE USER
 ##### http://localhost:8585/user/data/create
 ##### post request
 ##### request body > 
@@ -26,12 +29,12 @@ Assignment
     }
  
 
-#### GET
+#### GET USER
 ##### http://localhost:8585/user/data/get/1
 ##### get request
 
  
-#### UPDATE
+#### UPDATE USER
 ##### http://localhost:8585/user/data/update
 ##### put request
 ##### request body > 
@@ -43,12 +46,12 @@ Assignment
 	    "phoneNumber": "121212"
     }
  
-#### GET ALL
+#### GET ALL USERS
 ##### http://localhost:8585/user/data/getAll
 ##### get request
 
  
-#### DELETE
+#### DELETE USER
 ##### http://localhost:8585/user/data/delete?userId=1
 ##### delete request
 
