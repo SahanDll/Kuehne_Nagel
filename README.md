@@ -19,8 +19,8 @@ Assignment
 ##Service end points
 
 #### CREATE USER
-##### http://localhost:8585/user/data/create
 ##### post request
+##### http://localhost:8585/user/data/create
 ##### request body > 
     {
         "name": "sahan",
@@ -30,13 +30,13 @@ Assignment
  
 
 #### GET USER
-##### http://localhost:8585/user/data/get/1
 ##### get request
+##### http://localhost:8585/user/data/get/1
 
  
 #### UPDATE USER
-##### http://localhost:8585/user/data/update
 ##### put request
+##### http://localhost:8585/user/data/update
 ##### request body > 
     {
 	    "userId": 1,
@@ -47,14 +47,16 @@ Assignment
     }
  
 #### GET ALL USERS
-##### http://localhost:8585/user/data/getAll
 ##### get request
+##### http://localhost:8585/user/data/getAll
 
  
 #### DELETE USER
-##### http://localhost:8585/user/data/delete?userId=1
 ##### delete request
+##### http://localhost:8585/user/data/delete?userId=1
 
 
 #Requirements
-####Java 8
+
+Java 8
+
