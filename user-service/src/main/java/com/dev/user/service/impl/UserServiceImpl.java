@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService {
         try {
             Age age = restTemplate.getForObject(ageUrl+user.getName(), Age.class);
             if(age != null) {
-                log.info("Age : " + age.toString());
+                log.info("Age info : " + age.toString());
                 user.setAge(age.getAge());
                 userRepository.save(user);
                 rt.setStatusCode("200");

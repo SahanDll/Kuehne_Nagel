@@ -5,6 +5,7 @@ import com.dev.user.model.ResponseTemplate;
 import com.dev.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @Slf4j
@@ -15,31 +16,31 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping(value = "/create")
+    @PostMapping(value = "/create", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseTemplate createUser(@RequestBody User user){
         log.info("createUser of Controller : "+ user);
         return userService.createUser(user);
     }
 
-    @DeleteMapping(value = "/delete")
+    @DeleteMapping(value = "/delete", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseTemplate deleteUser(@RequestParam("userId") long userId){
         log.info("deleteUser of Controller : "+ userId);
         return userService.deleteUser(userId);
     }
 
-    @PutMapping(value = "/update")
+    @PutMapping(value = "/update", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseTemplate updateUser(@RequestBody User user){
         log.info("updateUser of Controller : "+ user);
         return userService.updateUser(user);
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping(value = "/get/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseTemplate getUser(@PathVariable("id") Long userId){
         log.info("getUser of Controller : "+ userId);
         return userService.getUser(userId);
     }
 
-    @GetMapping("/getAll")
+    @GetMapping(value = "/getAll", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseTemplate getAllUsers(){
         return userService.getAll();
     }
