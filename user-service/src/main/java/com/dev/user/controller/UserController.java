@@ -18,30 +18,30 @@ public class UserController {
     @PostMapping(value = "/create")
     public ResponseTemplate createUser(@RequestBody User user){
         log.info("createUser of Controller : "+ user);
-        return null;
+        return userService.createUser(user);
     }
 
     @DeleteMapping(value = "/delete")
-    public ResponseTemplate deleteUser(@RequestBody User user){
-        log.info("deleteUser of Controller : "+ user);
-        return null;
+    public ResponseTemplate deleteUser(@RequestParam("userId") long userId){
+        log.info("deleteUser of Controller : "+ userId);
+        return userService.deleteUser(userId);
     }
 
     @PutMapping(value = "/update")
     public ResponseTemplate updateUser(@RequestBody User user){
         log.info("updateUser of Controller : "+ user);
-        return null;
+        return userService.updateUser(user);
     }
 
     @GetMapping("/get/{id}")
     public ResponseTemplate getUser(@PathVariable("id") Long userId){
         log.info("getUser of Controller : "+ userId);
-        return null;
+        return userService.getUser(userId);
     }
 
     @GetMapping("/getAll")
     public ResponseTemplate getAllUsers(){
-        return null;
+        return userService.getAll();
     }
 
 }
